@@ -41,7 +41,7 @@ def use(song):
     while i < lenght:
         first_10_minutes = song[:ten_minutes]
         first_10_minutes.export(f"voice_{i}.{format}", format=format)
-        openai.api_key = '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'
+        openai.api_key = ''#add api key here
         Path = f"voice_{i}.{format}"
         audio_file = open(f"{Path}", "rb")
         transcript = str(openai.Audio.transcribe("whisper-1", audio_file))
